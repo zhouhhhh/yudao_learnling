@@ -1,0 +1,61 @@
+# 源码与文档由外层仓库统一管理，upstream/ 不忽略
+
+# 本地秘密与运行产物
+.env
+.env.*.local
+.env.local
+!.env.example
+*.log
+**/target/
+**/node_modules/
+/local/
+
+# 构建、依赖缓存与运行数据
+dist/
+.gradle/
+.flattened-pom.xml
+.pnpm-store/
+.npm/
+.cache/
+coverage/
+logs/
+.venv/
+__pycache__/
+*.pyc
+
+# IDE 与操作系统临时文件
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.tmp
+*.hprof
+hs_err_pid*
+*.xml.versionsBackup
+
+# 私有配置；上游 application-local.yaml 等样例继续收录
+application-my.yaml
+application-my.yml
+application-private.yaml
+application-private.yml
+http-client.private.env.json
+
+# 本地数据库导出与凭据文件；上游初始化 SQL 需脱敏后提交
+/backups/
+/dumps/
+.env.private
+.env.secrets
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
